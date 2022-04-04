@@ -1,0 +1,13 @@
+<form class="entry-form" method="post">
+  <label for="name">username or e-mail</label
+  ><input
+    type="text"
+    name="name"
+    required
+    minlength="1"
+    value="<%= locals[:name] %>"
+  />
+  <label for="password">password</label
+  ><input type="password" name="password" required minlength="1" />
+  <button>log in</button>
+</form>

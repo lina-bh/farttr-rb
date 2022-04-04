@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>
+      <%= locals.key?(:title) ? "#{locals[:title]} — farttr" : "farttr" %>
+    </title>
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon" />
+  </head>
+  <body>
+    <header>
+      <h1><a href="/">farttr</a></h1>
+      <span
+        ><% if @user %>hello <%= @user.name %>
+        <form action="/logout" method="post"><button>log out</button></form>
+        <% else %>
+        <a href="/join">join</a>
+        <a href="/login">login</a>
+        <% end %>
+      </span>
+    </header>
+    <p class="page-error"><%= locals[:error] %></p>
+    <%= yield %>
+  </body>
+</html>

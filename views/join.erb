@@ -1,0 +1,16 @@
+<form class="entry-form" method="post">
+  <label for="username">username</label><input name="username" type="text"
+  required minlength="1" value="<%= params["username"] %>" />
+  <div class="form-note">(you can change this later)</div>
+  <label for="email">e-mail address</label><input name="email" type="email"
+  value="<%= params["email"] %>" />
+  <div class="form-note">
+    you don't need this, but you won't be able to reset your password without it
+  </div>
+  <label for="password">password</label
+  ><input name="password" type="password" required minlength="8" />
+  <label for="verify">verify password</label
+  ><input name="verify" type="password" minlength="8" />
+  <div class="form-note">your password must be at least 8 characters long</div>
+  <button>join</button>
+</form>

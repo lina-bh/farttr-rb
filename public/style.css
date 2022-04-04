@@ -1,0 +1,63 @@
+@charset "utf-8";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  padding: 1rem 2rem;
+}
+
+header a,
+header a:visited,
+header a:link {
+  color: #00e;
+}
+
+body > header {
+  display: flex;
+  align-items: center;
+}
+
+body > header > h1 {
+  flex-grow: 1;
+}
+
+body > header form {
+  display: inline-block;
+}
+
+h1 a,
+h1 a:visited,
+h1 a:link {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.entry-form > label,
+.entry-form > button {
+  display: block;
+}
+
+.entry-form > input[type="text"],
+.entry-form > input[type="password"],
+.entry-form > input[type="email"],
+.entry-form > button {
+  width: 200px;
+}
+
+.entry-form > button:last-of-type {
+  margin-top: 1rem;
+}
+
+.form-note {
+  font-size: small;
+  color: #333;
+}
+
+.page-error {
+  color: red;
+}

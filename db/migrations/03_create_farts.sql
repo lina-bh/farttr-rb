@@ -1,0 +1,6 @@
+CREATE TABLE farts(
+  id INTEGER PRIMARY KEY,
+  time INTEGER NOT NULL,
+  user INTEGER NOT NULL,
+  FOREIGN KEY(user) REFERENCES users(id)
+);
